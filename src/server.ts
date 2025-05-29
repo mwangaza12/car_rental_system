@@ -56,6 +56,19 @@ const getPaymentsWithDetails = async () => {
 };
 
 
+// get Rentals
+const getRentals = async() => {
+  return await db.query.Rental.findMany({
+    with:{
+      customer:{
+        columns:{
+          firstName: true,
+          lastName: true
+        }
+      }
+    }
+  })
+}
 
 
 // Get Customers
@@ -89,6 +102,9 @@ async function main() {
 
   // const cars =  await getCars();
   // console.log(cars);
+
+  // const rentals = await getRentals();
+  // console.log(rentals)
 
 }
 
