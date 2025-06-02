@@ -38,7 +38,7 @@ export const Payment = pgTable("payment", {
 });
 
 
-
+// Relations
 // Car (one) → Rental (many)
 export const carRentalRelation = relations(Car, ({ many }) => ({
   rentals: many(Rental),

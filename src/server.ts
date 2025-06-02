@@ -55,7 +55,6 @@ const getPaymentsWithDetails = async () => {
   });
 };
 
-
 // get Rentals
 const getRentals = async() => {
   return await db.query.Rental.findMany({
